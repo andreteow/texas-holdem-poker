@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texas Hold'em Poker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Texas Hold'em</h1>
+      <div id="game-info">
+        <span>Blinds: <span id="blind-level">50/100</span></span>
+        <span>Pot: <span id="pot-display">0</span></span>
+      </div>
+    </header>
+    <div class="table-container">
+      <div id="poker-table">
+        <div class="community-area">
+          <div id="community-cards" class="cards-container"></div>
+          <div class="pot-chip-stack">💰 <span id="main-pot">0</span></div>
+        </div>
+        <div id="players-container"></div>
+      </div>
+    </div>
+    <div id="controls-area" class="controls hidden">
+      <div class="action-buttons">
+        <button id="btn-fold" class="btn btn-danger">Fold</button>
+        <button id="btn-check" class="btn btn-secondary">Check</button>
+        <button id="btn-call" class="btn btn-primary">Call</button>
+        <button id="btn-raise" class="btn btn-warning">Raise</button>
+      </div>
+      <div class="slider-container">
+        <input type="range" id="raise-slider" min="0" max="1000" value="0">
+        <span id="raise-amount-display">0</span>
+      </div>
+    </div>
+    <div id="message-box" class="message-box"></div>
+    <div id="overlay" class="overlay hidden">
+      <div class="modal">
+        <h2 id="modal-title">Game Over</h2>
+        <p id="modal-msg"></p>
+        <button id="btn-restart">Start New Game</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
